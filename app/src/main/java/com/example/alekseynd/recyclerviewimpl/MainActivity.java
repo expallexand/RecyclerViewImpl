@@ -3,6 +3,8 @@ package com.example.alekseynd.recyclerviewimpl;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.alekseynd.recyclerviewimpl.ui.RecyclerFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
