@@ -6,11 +6,11 @@ import android.widget.TextView;
 
 import com.example.alekseynd.recyclerviewimpl.R;
 
-public class ViewHolderText extends RecyclerView.ViewHolder {
+public class ViewHolderUser extends RecyclerView.ViewHolder {
 
     private TextView mTvFirstName, mTvSecondName;
 
-    public ViewHolderText(View view) {
+    public ViewHolderUser(View view) {
         super(view);
         mTvFirstName = view.findViewById(R.id.tv_first_name);
         mTvSecondName = view.findViewById(R.id.tv_second_name);
