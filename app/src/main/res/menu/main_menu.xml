@@ -4,15 +4,18 @@
 
     <item
         android:id="@+id/action_add_typeUser_item"
+        android:icon="@drawable/ic_short_text"
         android:enabled="true"
         android:orderInCategory="100"
         android:title="@string/action_add_typeUser_item"
         android:visible="true"
-        app:showAsAction="withText" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_add_image_item"
         android:orderInCategory="101"
-        android:title="@string/action_add_image_item" />
+        android:title="@string/action_add_image_item"
+        android:icon="@drawable/ic_image"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="102"

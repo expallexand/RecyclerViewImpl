@@ -63,7 +63,14 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteItem(position);
+            }
+        });
 
         switch(holder.getItemViewType()) {
             case USER:
@@ -88,14 +95,14 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
     private void configureViewHolderUser(ViewHolderUser vhUser, int position) {
         User user = (User) mItems.get(position);
         if (user != null) {
-            vhUser.getTvFirstName().setText("Name: " + user.getFirstname());
-            vhUser.getTvSecondName().setText("Family: " + user.getSecondName());
+            vhUser.getTvFirstName().setText("" + user.getFirstname());
+            vhUser.getTvSecondName().setText("" + user.getSecondName());
         }
     }
 
     private void configureViewHolderImage(ViewHolderImage vhImage, int position) {
 
-        vhImage.getImageView().setImageResource(R.drawable.ic_launcher_background);
+        vhImage.getImageView().setImageResource(R.drawable.got);
     }
 
     public void addItem(RecyclerFragment context, int type) {
@@ -105,7 +112,7 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
                 notifyItemInserted(mItems.size());
                 break;
             case USER:
-                mItems.add(new User("Test", "Test"));
+                mItems.add(new User("Coming ", "soon!"));
                 notifyItemInserted(mItems.size());
                 break;
             default:

@@ -59,7 +59,7 @@ public class RecyclerFragment extends Fragment {
 
     private ArrayList<Object> getInitData() {
         ArrayList<Object> items = new ArrayList<>();
-        items.add(new User("Tyrion", "Lannister"));
+        items.add(new User("Coming ", "Soon!"));
         items.add("image");
 
         return items;
@@ -68,8 +68,8 @@ public class RecyclerFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);
-        setHasOptionsMenu(true);
+          setRetainInstance(true);
+          setHasOptionsMenu(true);
 
         mComplexRecyclerViewAdapter = new ComplexRecyclerViewAdapter(getInitData());
     }
